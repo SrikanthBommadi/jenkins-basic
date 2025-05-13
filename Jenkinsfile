@@ -4,22 +4,25 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building the app...'
-                sh 'javac MyApp.java'  // Example for Java
+                echo 'Building the application...'
+                // Example build command
+                sh 'make build'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh 'java MyAppTest'  // Replace with real test command
+                // Example test command
+                sh 'make test'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying the app...'
-                sh './deploy.sh'  // A shell script for deployment
+                echo 'Deploying the application...'
+                // Example deploy command
+                sh 'make deploy'
             }
         }
     }
