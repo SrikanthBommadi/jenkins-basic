@@ -1,0 +1,7 @@
+CONTINUES INTEGRATION==
+##it is way of INTEGRATION the code from source and create artifact 
+## in between creating and source we have to install dependecies
+1)git 2)npm install 3)sonar-scan 4)zip the file
+## instead of the installing the dependecies we can use the CONTINUES integration 
+## so we can use jenkins her or github actions
+---------------------------------------------
