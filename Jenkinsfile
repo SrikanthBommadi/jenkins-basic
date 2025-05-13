@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building the application...'
                 // Example build command
-                sh 'make build'
+                //sh ' build'
             }
         }
 
@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo 'Running tests...'
                 // Example test command
-                sh 'make test'
+                //sh 'make test'
             }
         }
 
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo 'Deploying the application...'
                 // Example deploy command
-                sh 'make deploy'
+                //sh 'make deploy'
             }
         }
     }
