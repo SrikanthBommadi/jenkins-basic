@@ -5,7 +5,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the application...'
-                // Example build command
                 sh 'make build'
             }
         }
@@ -13,7 +12,6 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                // Example test command
                 sh 'make test'
             }
         }
@@ -21,7 +19,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
-                // Example deploy command
                 sh 'make deploy'
             }
         }
