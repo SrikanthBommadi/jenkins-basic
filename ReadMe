@@ -1,7 +1,25 @@
-CONTINUES INTEGRATION==
-##it is way of INTEGRATION the code from source and create artifact 
-## in between creating and source we have to install dependecies
-1)git 2)npm install 3)sonar-scan 4)zip the file
-## instead of the installing the dependecies we can use the CONTINUES integration 
-## so we can use jenkins her or github actions
----------------------------------------------
+it is the way of integrating the code from git and create the artifact
+in b/w hgetting the code sourcr to artifact some checks should be done with installing the dependencies 
+Like running testcases,scans.
+CI-we just automate the process here
+--------------
+jenkins ---plain server
+plugin-----installing what we need
+jobs------ we call everything as job
+bulid------we call a job after trigger 
+agent -----run jobs across multiple machines.
+           The agent tells Jenkins:Where to run the code.
+		   What kind of environment or label is required.
+--------------------------------
+sample line by line==
+pipeline {                            =this is pipeline
+    agent any                         =
+    stages {                          = only stages 
+        stage('Hello') {              = each seperate stage
+            steps {
+                echo 'Hello, world!'  = what to run here command
+            }
+        }
+    }
+}
+-------------------------------------------
