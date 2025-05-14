@@ -10,7 +10,7 @@
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
     options {
-        timeout(time: 30, unit: 'SECONDS' ) //this for time out after soem time 
+        timeout(time: 30, unit: 'SECONDS' ) //this for time out after soem time. 
         disableConcurrentBuilds()           // 1 build is running if you press 2nd build it will wait until 1st build done
         retry(2)                            // if it fails once it will start again two as we mention
     }
