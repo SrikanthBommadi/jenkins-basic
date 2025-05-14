@@ -2,6 +2,10 @@
     agent {
         label 'srikanth'
     }
+    environment {
+        PROJECT =  "SRIKANTH"
+        COMPONENT = "BACKEND"
+    }
     parameters { // we can store configuration here 
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
         text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
@@ -20,6 +24,7 @@
                 echo 'Building the application...'
                 sh 'echo build'
                 sh 'sleep 2'
+                sh 'echo  Project: $PROJECT '
                 //error 'pipe failed'
             }
         }
@@ -62,7 +67,7 @@
                 branch 'production'
             }
             steps {
-                sh " it is Deploying "
+                sh " echo it is Deploying "
             }
         }
     }
