@@ -3,14 +3,17 @@
         label 'agent'
     }
     options {
-        timeout(time: 10, unit: 'SECONDS' )
+        timeout(time: 10, unit: 'SECONDS' ) //this for time out after soem time 
+        disableConcurrentBuilds()           // 1 build is running if you press 2nd build it will wait until 1st build done
+        retry(2)                            // if it fails once it will start again two as we mention
     }
     stages {
         stage('Build') {
             steps {
                 echo 'Building the application...'
                 sh 'echo build'
-                sh 'sleep 8'
+                sh 'sleep 2'
+                error 'pipe failed'
             }
         }
         stage('Test') {
