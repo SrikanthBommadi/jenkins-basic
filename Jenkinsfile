@@ -2,11 +2,15 @@
     agent {
         label 'agent'
     }
+    options {
+        timeout(time: 10, unit: 'SECONDS' )
+    }
     stages {
         stage('Build') {
             steps {
                 echo 'Building the application...'
                 sh 'echo build'
+                sleep '10'
             }
         }
         stage('Test') {
