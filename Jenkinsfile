@@ -44,6 +44,19 @@
                 echo "Password: ${params.PASSWORD}"
             }
         }
+        stage ('input') {
+            input {
+                message "proceed"
+                ok "yes"
+                submitter "alice,bob"
+                parameters {
+                    string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+                }
+                steps {
+                echo "Hello, ${PERSON}, nice to meet you."
+                }
+            }
+        }
     }
     post {
         always {
