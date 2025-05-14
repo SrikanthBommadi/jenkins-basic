@@ -10,7 +10,7 @@
             steps {
                 echo 'Building the application...'
                 sh 'echo build'
-                sleep '10'
+                sh 'sleep 10'
             }
         }
         stage('Test') {
