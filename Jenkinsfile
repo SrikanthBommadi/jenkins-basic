@@ -6,19 +6,19 @@
         stage('Build') {
             steps {
                 echo 'Building the application...'
-                sh 'mkdir build'
+                sh 'echo build'
             }
         }
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                sh 'mkdir test'
+                sh 'echo test'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
-                sh 'mkdir deploy'
+                sh 'echo deploy'
             }
         }
     }
