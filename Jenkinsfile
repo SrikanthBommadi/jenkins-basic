@@ -1,4 +1,4 @@
-pipeline {
+    pipeline {
     agent {
         label 'agent'
     }
@@ -20,6 +20,18 @@ pipeline {
                 echo 'Deploying the application...'
                 sh 'mkdir deploy'
             }
+        }
+    }
+    post {
+        always {
+            echo " always show this "
+            deleteDir() //it will delete the data of build which is in workspace 
+        }
+        success {
+            echo "when it success"
+        }
+        failure {
+            echo "when it failure"
         }
     }
 }
