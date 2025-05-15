@@ -24,3 +24,10 @@ pipeline {                            =this is pipeline
     }
 }
 -------------------------------------------
+Triggers=
+##Set up automated actions that start your build based on specific events, like code changes or scheduled times.##
+1)Build after other projects are built=Triggers this job only after specified other jobs have completed, often used in pipelines.
+2)Build periodically=SCHEDULED TIMES USING CRON SYNTAX,WITH/WITHOUT OF CODE CHANGES
+3)GitHub hook trigger for GITScm polling==Triggers a build when GitHub sends a webhook (on push or pull request) to Jenkins.
+4)Poll SCM=CHECKS THE GIT FOR CHANGES AT SPECIFIED INTERVALS. IF CHANGES ARE FOUND BUILD IS TRIGEERED IF NOT STANDBY
+5)Trigger builds remotely (e.g., from scripts)= Allows builds to be triggered via a URL with an authentication token
